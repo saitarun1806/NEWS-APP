@@ -44,17 +44,17 @@ public class SettingsActivity extends AppCompatActivity {
         uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         userRef = FirebaseDatabase.getInstance().getReference("users").child(uid);
 
-        // Set up spinners
-        ArrayAdapter<String> langAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, langs);
+        // Use custom spinner layout
+        ArrayAdapter<String> langAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, langs);
+        langAdapter.setDropDownViewResource(R.layout.spinner_item);
         languageSpinner.setAdapter(langAdapter);
 
-        ArrayAdapter<String> catAdapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, categories);
+        ArrayAdapter<String> catAdapter = new ArrayAdapter<>(this, R.layout.spinner_item, categories);
+        catAdapter.setDropDownViewResource(R.layout.spinner_item);
         categorySpinner.setAdapter(catAdapter);
 
-        // Load existing saved preferences
         loadUserPreferences();
 
-        // Save button
         saveButton.setOnClickListener(v -> {
             int langPos = languageSpinner.getSelectedItemPosition();
             int catPos = categorySpinner.getSelectedItemPosition();

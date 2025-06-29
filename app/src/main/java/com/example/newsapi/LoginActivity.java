@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
         signup= (TextView) findViewById(R.id.signup);
         myAuth=FirebaseAuth.getInstance();
         Window window = getWindow();
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.status_bar_color));
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.status_bar_color2));
         loginb.setOnClickListener(view ->loginUser());
         forgotp.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this,ForgotPasswordActivity.class)));
         signup.setOnClickListener(view -> startActivity(new Intent(LoginActivity.this,RegisterActivity.class)));

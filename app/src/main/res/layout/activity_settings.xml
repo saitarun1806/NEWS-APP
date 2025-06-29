@@ -32,6 +32,7 @@
         android:id="@+id/languageSpinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+
         android:background="@drawable/rounded_edittext"
         android:padding="8dp"/>
 

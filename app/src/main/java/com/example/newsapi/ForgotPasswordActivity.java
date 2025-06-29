@@ -28,7 +28,7 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         myAuth=FirebaseAuth.getInstance();
         resete.setOnClickListener(view -> resetUser());
         Window window = getWindow();
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.status_bar_color));
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.status_bar_color2));
     }
 
     private void resetUser() {

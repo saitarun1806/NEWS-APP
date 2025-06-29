@@ -31,7 +31,7 @@ public class RegisterActivity extends AppCompatActivity {
         reg= (Button) findViewById(R.id.Reg);
         myAuth=FirebaseAuth.getInstance();
         Window window = getWindow();
-        window.setStatusBarColor(ContextCompat.getColor(this, R.color.status_bar_color));
+        window.setStatusBarColor(ContextCompat.getColor(this, R.color.status_bar_color2));
         signin.setOnClickListener(view -> {
             Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
 
